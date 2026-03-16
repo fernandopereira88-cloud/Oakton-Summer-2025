@@ -1,0 +1,12 @@
+x = -1
+counter = 0
+right_value = 50
+while x != right_value:
+    x = int(input("Enter a number:"))
+
+    if x < right_value:
+        print("Your guess is too low")
+    elif x > right_value:
+        print("Your guess is too high")
+    counter += 1
+print(f'Correct! It took you {counter} guesses.')

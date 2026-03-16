@@ -1,0 +1,37 @@
+def main():
+    try:
+        #
+        # Write code here to open the file and calculate the
+        # sum of the numbers it contains.
+        #
+        sum_lineint = 0
+
+        readfile = open('numbers.txt','r')
+        for line in readfile:
+            lineint = int(line)
+            sum_lineint += lineint
+
+    except FileNotFoundError:
+        #
+        # Write code here that executes when the file does not exist.
+        #
+        print("File not found")
+    except ValueError:
+        #
+        # Write code here that handles the ValueError exception.
+        # This will happen when you try to convert non-numeric
+        # data to an int.
+        #
+        print("Invalid data")
+    else:
+        #
+        # Write code here that prints the sum of the numbers.
+        #
+        print(sum_lineint)
+    finally:
+        #
+        # Write code here that prints "Processing complete".
+        #
+        print('Processing complete')
+if __name__ == '__main__':
+    main()

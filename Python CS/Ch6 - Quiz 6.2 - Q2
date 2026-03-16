@@ -1,0 +1,9 @@
+
+infile = open('words.txt','r')
+count=0
+for line in infile:
+    
+    string = line
+    if string.rstrip('\n') == 'sunshine':
+        count = count+1
+    

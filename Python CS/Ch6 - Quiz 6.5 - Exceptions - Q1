@@ -1,0 +1,16 @@
+
+try:
+    file1 = open('numbers.txt','r')
+
+    for line in file1:
+        if int(line) > 0:
+            print(line,end='')
+
+except FileNotFoundError:
+    print("File not found")
+
+except ValueError:
+    print("Invalid data")
+
+except:
+    print("Error")

@@ -1,0 +1,30 @@
+#mylist = [1, 2, 3, 4, 5]
+#print(mylist[2:])
+
+#mylist = ['mercury', 'venus', 'earth', 'mars',
+#'jupiter', 'staurn', 'uranus', 'neptune']
+#print(mylist[0::2])
+
+#sentence='Way. too. many.'
+#sentences_split =sentence.split('.')
+#print(sentences_split)
+#fixed_capital=''
+#for item in sentences_split:
+#    for ch in range(len(item)):
+#        if ch == 0:
+#            fixed_capital += item[0].upper()
+#        else:
+#            fixed_capital += item[1:].lower()
+#    fixed_capital +='.'
+#print(fixed_capital)
+    
+    
+sentence='Way. too. many.'
+sentences_split =sentence.split('.')
+sentences_split.remove('')
+fixed_capital=''
+for item in sentences_split:
+
+    fixed_capital=fixed_capital+item[0].upper()+item[1:].lower()+'.'
+    print(fixed_capital)
+print(fixed_capital)

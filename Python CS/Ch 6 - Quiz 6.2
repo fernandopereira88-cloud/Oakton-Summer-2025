@@ -1,0 +1,15 @@
+infile = open('percentages.txt','r')
+sum_check = 0
+line = infile.readline()
+while line !='':
+    #print(line,end='')
+    sum_check = sum_check + float(line)
+    line = infile.readline()
+    
+infile.close()
+print(sum_check)
+
+if sum_check >= 99.9 and sum_check <= 100.1:
+    percentage_check = True
+else:
+    percentage_check = False

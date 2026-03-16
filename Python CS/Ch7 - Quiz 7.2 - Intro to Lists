@@ -1,0 +1,27 @@
+
+#team = [0] *11
+
+#for member in range(len(team)):
+#    name = input('Enter the player name:')
+#    team[member] = name
+#print(team)
+
+
+#items = list(range(1,5,1))
+
+#for element in range(len(items)):
+#    items[element]=items[element]+1
+
+#print(items)
+
+
+#items = [4,-3,7,-1,0]
+
+#for element in range(len(items)):
+#    if items[element] < 0:
+#        items[element]=0
+
+#print(items)
+
+
+

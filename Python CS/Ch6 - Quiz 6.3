@@ -1,0 +1,13 @@
+new_file = open('my_data.txt','w')
+
+new_file.write('1\n')
+new_file.write('2\n')
+new_file.write('3\n')
+new_file.write('4\n')
+new_file.write('5\n')
+
+new_file.close()
+
+with open('my_data.txt','r') as mydata, open('my_copy.txt','w') as mycopy:
+    for line in mydata:
+        mycopy.write(f'{line}\n')
