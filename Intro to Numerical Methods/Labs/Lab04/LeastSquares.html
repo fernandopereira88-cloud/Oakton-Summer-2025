@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <title>Least Squares</title>
+        <script type = "text/javascript">
+            // write function definitions here
+            // the global variable
+            var count = 0
+            // the function
+            function getData_OnClick () {
+               var vectorX = [];
+               var vectorY = [];
+               count = parseInt(prompt("How many (x,y) data points?",""));
+               for (var index = 0; index < count; index++) {
+                   vectorX[index] = parseFloat(prompt("Enter a x-value:",""));
+                   vectorY[index] = parseFloat(prompt("Enter a y-value:",""));
+               }
+               result = LeastSquares(vectorX,vectorY);
+            }
+            
+            function LeastSquares(vecX, vecY) {
+                var sumx =0,sumy = 0, sumxx = 0, sumxy = 0,slope = 0, intercept = 0;
+                for (var index = 0; index < count; index++) {
+                    document.write("x" + (index + 1) + " = " + vecY[index]);
+                    document.write("<br />");
+                    sumx += vecX[index];
+                    sumxx += vecX[index] * vecX[index];
+                    document.write("y" + (index+1) + " = " + vecY[index]);
+                    document.write("<br />");
+                    sumy += vecY[index];
+                    sumxy += vecX[index] * vecY[index];
+                }
+                
+                slope = ((count*sumxy) - (sumx*sumy)) / ((count*sumxx) - (sumx*sumx))
+                
+                intercept = ((sumy*sumxx) - (sumx*sumxy)) / ((count*sumxx) - (sumx*sumx))
+                         
+                document.write("least squares approximation");
+                document.write("<br />");
+                document.write("sum of the x values " + sumx);
+                document.write("<br />");
+                document.write("sum of the y values " + sumy);
+                document.write("<br />");
+                document.write("sum of square x values " + sumxx);
+                document.write("<br />");
+                document.write("sum of the xy value " + sumxy);
+                document.write("<br / >");
+                document.write("predicted slope " + slope)
+                document.write("<br / >");
+                document.write("predicted intercept " + intercept)
+                document.write("<br / >");
+                document.write("Equation of the line: y = " + slope +"*x + " + intercept)
+            }
+        </script>
+    </head>
+        
+    <body style = "font-family: Tahoma;">
+        <h2> This document uses Least Square Approximation</h2>
+        <hr />
+        <input type = "button" name = "GetData" value = "approximate" onclick = "getData_OnClick();" />
+                                
+    </body>
+</html>
